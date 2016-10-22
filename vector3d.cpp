@@ -1,3 +1,4 @@
+
 vector3d  #include "vector3d.hpp"
 
 #include <cmath>
@@ -52,3 +53,12 @@ int vector3d::compareTo( const vector3d &other ) const {
 }
 bool vector3d::operator == (const vector3d &a) const { return compareTo(a)==0; }
 bool vector3d::operator != (const vector3d &a) const { return compareTo(a)!=0; }
+std::ostream& operator<<(std::ostream& out, const vector3d &a){
+
+    out << "{" << a.x << ", " << a.y << ", " << a.z << "}";
+
+    return out;
+
+}
+
+}

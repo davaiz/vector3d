@@ -15,18 +15,18 @@ public:
     int get_x();
     int get_y();
     int get_z();
-    vector3d() {};
-    vector3d( int _x, int _y, int _z) {};
-    vector3d operator +(const vector3d &a) {};
-    vector3d operator - (const vector3d &a) {};
-    vector3d operator * (const vector3d &a) {};
-    vector3d operator ^ (const vector3d &a) {};
-    int operator * ((const int &a) {};
-    int length(const vector3d &a) {};
-    vector3d normalize(const vector3d &a) {};
-    int normalize(const vector3d &a) const {};
-    bool operator == (const vector3d &a) {};
-    bool operator != (const vector3d &a) {};
+    vector3d() ;
+    vector3d( int _x, int _y, int _z) ;
+    vector3d operator +(const vector3d &a) const;
+    vector3d operator - (const vector3d &a) const;
+    vector3d operator * (const vector3d &a) const;
+    vector3d operator ^ (const vector3d &a) const;
+    int operator * ((const int &a) const;
+    int length(const vector3d &a) const;
+    vector3d normalize(const vector3d &a) const;
+    int normalize(const vector3d &a) const ;
+    bool operator == (const vector3d &a) const;
+    bool operator != (const vector3d &a) const;
     // TODO: дописать
 
 };

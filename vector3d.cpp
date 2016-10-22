@@ -1,4 +1,4 @@
-#include "vector3d.hpp"
+  #include "vector3d.hpp"
 
 #include <cmath>
 
@@ -26,18 +26,29 @@ vector3d::vector3d( int _x, int _y, int _z) {
     y = _y;
     z = _z;
 }
-vector3d:: operator +(const vector3d &a) {
+vector3d::operator + (const vector3d &a) {
     return(x + a.x, y + a.y, z + a.z );
 }
-vector3d:: operator -(const vector3d &a) {
+vector3d::operator - (const vector3d &a) {
     return(x - a.x, y - a.y, z - a.z );
 }
-vector3d operator*(const vector3d &a) {
+vector3d::operator * (const vector3d &a) {
     return(x * a.x, y * a.y, z * a.z);
 }
-vector3d operator ^(const vector3d &a) {
+vector3d::operator ^ (const vector3d &a) {
     return(y * a.z - z * a.y, z * a.x - x * a.z, x * a.y - y * a.x );
 }
-bool operator==(const vector3d &a) {
-
+int vector3d::operator * (const int &a){
+    return vector3d(x * a, y * a, z * a);
 }
+int vector3d::length(const vector3d &a){
+    return sqrt(x*x+y*y+z*z);
+}
+vector3d::normalize(const vector3d &a){
+    return vector3d(x/length(a),y/length(a),z/length(a));
+}
+int vector3d::compareTo( const vector3d &other ) const {
+    return((x-other.x)+(y-other.y)+(z-other.z));
+}
+bool vector3d::operator == (const vector3d &a){ return compareTo(a)==0; }
+bool vector3d::operator != (const vector3d &a){ return compareTo(a)!=0; }

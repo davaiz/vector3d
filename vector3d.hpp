@@ -1,4 +1,4 @@
-#ifndef VECTOR3D_H
+ #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
 #include <ostream>
@@ -18,13 +18,15 @@ public:
     vector3d() {};
     vector3d( int _x, int _y, int _z) {};
     vector3d operator +(const vector3d &a) {};
-    vector3d operator -(const vector3d &a) {};
-    vector3d operator*(const vector3d &a) {};
-    vector3d operator^(const vector3d &a) {};
-    bool operator==(const vector3d &a) {};
-
-
-
+    vector3d operator - (const vector3d &a) {};
+    vector3d operator * (const vector3d &a) {};
+    vector3d operator ^ (const vector3d &a) {};
+    int operator * ((const int &a) {};
+    int length(const vector3d &a) {};
+    vector3d normalize(const vector3d &a) {};
+    int normalize(const vector3d &a) const {};
+    bool operator == (const vector3d &a) {};
+    bool operator != (const vector3d &a) {};
     // TODO: дописать
 
 };

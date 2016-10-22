@@ -32,8 +32,7 @@ public:
 
 };
                     
-
-std::ostream& operator<<(std::ostream&stream, const vector3d &a);
+std::ostream& operator<<(std::ostream& out, const vector3d &a);
 
 // TODO: дописать
 

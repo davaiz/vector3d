@@ -1,4 +1,5 @@
- #ifndef VECTOR3D_H
+
+#ifndef VECTOR3D_H
 #define VECTOR3D_H
 
 #include <ostream>
@@ -30,9 +31,10 @@ public:
     // TODO: дописать
 
 };
-std::ostream &operator<<(std::ostream &stream, const vector3d& a) {
-        return stream << "(" << a.x << ";" << a.y << ";" << a.z << ")";
-}
+                    
+
+std::ostream& operator<<(std::ostream&stream, const vector3d &a);
+
 // TODO: дописать
 
 #endif

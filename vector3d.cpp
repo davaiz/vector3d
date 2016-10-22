@@ -61,4 +61,4 @@ std::ostream& operator<<(std::ostream& out, const vector3d &a){
 
 }
 
-}
+

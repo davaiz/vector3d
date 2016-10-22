@@ -30,7 +30,9 @@ public:
     // TODO: дописать
 
 };
-
+std::ostream &operator<<(std::ostream &stream, const vector3d& a) {
+        return stream << "(" << a.x << ";" << a.y << ";" << a.z << ")";
+}
 // TODO: дописать
 
 #endif

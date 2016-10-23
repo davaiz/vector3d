@@ -1,4 +1,5 @@
 
+
 vector3d  #include "vector3d.hpp"
 
 #include <cmath>
@@ -33,6 +34,9 @@ vector3d vector3d::operator + (const vector3d &a) const {
 vector3d vector3d::operator - (const vector3d &a) const {
     return vector3d(x - a.x, y - a.y, z - a.z );
 }
+vector3d vector3d::operator - () const {
+            return vector3d(-x, -y, -z);
+}
 double vector3d::operator * (const vector3d &a) const {
     return (x * a.x + y * a.y + z * a.z);
 }
@@ -44,14 +48,15 @@ vector3d vector3d::operator * (double mult, const vector3d &a) const {
 }
 vector3d vector3d::operator * (const double &a, double mult) const {
     return vector3d(mult * a.x, a.y * mult, a.z * mult);
-    
 }
 double vector3d::length() const {
     return sqrt(x * x + y * y + z * z);
 }
-vector3d vector3d::normalize() const {
-    double length = this->length();
-    return vector3d(x/length, y/length, z/length);
+void vector3d::normalize() {
+    double len = length();  
+    x=x/len;
+    y=y/len;
+    z=z/len; 
 }
 double vector3d::compareTo( const vector3d &other ) const {
     return((x-other.x)+(y-other.y)+(z-other.z));

@@ -39,7 +39,7 @@ vector3d vector3d::operator * (const vector3d &a) const {
 vector3d vector3d::operator ^ (const vector3d &a) const {
     return(y * a.z - z * a.y, z * a.x - x * a.z, x * a.y - y * a.x );
 }
-vector3d vector3d::operator * (const vector3d &a) const {
+vector3d vector3d::operator * (const int &a) const {
     return vector3d(x * a, y * a, z * a);
 }
 int vector3d::length(const vector3d &a) const {

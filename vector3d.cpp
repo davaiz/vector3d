@@ -49,8 +49,9 @@ vector3d vector3d::operator * (const double &a, double mult) const {
 double vector3d::length() const {
     return sqrt(x * x + y * y + z * z);
 }
-vector3d vector3d::normalize(const vector3d &a) const {
-    return vector3d(x/length(a),y/length(a),z/length(a));
+vector3d vector3d::normalize() const {
+    double length = this->length();
+    return vector3d(x/length, y/length, z/length);
 }
 double vector3d::compareTo( const vector3d &other ) const {
     return((x-other.x)+(y-other.y)+(z-other.z));

@@ -1,4 +1,5 @@
 
+
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
@@ -26,6 +27,7 @@ public:
     int length(const vector3d &a) const;
     vector3d normalize(const vector3d &a) const;
     int normalize(const vector3d &a) const ;
+    int compareTo( const vector3d &other ) const;
     bool operator == (const vector3d &a) const;
     bool operator != (const vector3d &a) const;
     // TODO: дописать

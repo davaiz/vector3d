@@ -25,7 +25,7 @@ public:
     vector3d operator ^ (const vector3d &a) const;
     vector3d operator * (double mult, const vector3d &a) const;
     vector3d operator * (const double &a, double mult) const;
-    double length(const vector3d &a) const;
+    double length() const;
     vector3d normalize(const vector3d &a) const;
     double compareTo( const vector3d &other ) const;
     bool operator == (const vector3d &a) const;

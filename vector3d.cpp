@@ -46,7 +46,7 @@ vector3d vector3d::operator * (const double &a, double mult) const {
     return vector3d(mult * a.x, a.y * mult, a.z * mult);
     
 }
-double vector3d::length(const vector3d &a) const {
+double vector3d::length() const {
     return sqrt(x * x + y * y + z * z);
 }
 vector3d vector3d::normalize(const vector3d &a) const {

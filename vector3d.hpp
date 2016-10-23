@@ -1,5 +1,6 @@
 
 
+
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
@@ -21,11 +22,12 @@ public:
     vector3d( double _x, double _y, double _z) ;
     vector3d operator +(const vector3d &a) const;
     vector3d operator - (const vector3d &a) const;
+    vector3d operator - () const;
     double operator * (const vector3d &a) const;
     vector3d operator ^ (const vector3d &a) const;
     
     double length() const;
-    vector3d normalize() const;
+    void normalize() ;
     double compareTo( const vector3d &other ) const;
     bool operator == (const vector3d &a) const;
     bool operator != (const vector3d &a) const;

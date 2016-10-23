@@ -23,7 +23,7 @@ public:
     vector3d operator - (const vector3d &a) const;
     vector3d operator * (const vector3d &a) const;
     vector3d operator ^ (const vector3d &a) const;
-    int operator * ((const int &a) const;
+    vector3d operator * ((const int &a) const;
     int length(const vector3d &a) const;
     vector3d normalize(const vector3d &a) const;
     int normalize(const vector3d &a) const ;

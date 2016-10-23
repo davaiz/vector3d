@@ -28,25 +28,29 @@ vector3d::vector3d( double _x, double _y, double _z) {
     z = _z;
 }
 vector3d vector3d::operator + (const vector3d &a) const {
-    return(x + a.x, y + a.y, z + a.z );
+        return vector3d(x + a.x, y + a.y, z + a.z );
 }
 vector3d vector3d::operator - (const vector3d &a) const {
-    return(x - a.x, y - a.y, z - a.z );
+    return vector3d(x - a.x, y - a.y, z - a.z );
 }
-vector3d vector3d::operator * (const vector3d &a) const {
-    return(x * a.x, y * a.y, z * a.z);
+double vector3d::operator * (const vector3d &a) const {
+    return (x * a.x + y * a.y + z * a.z);
 }
 vector3d vector3d::operator ^ (const vector3d &a) const {
-    return(y * a.z - z * a.y, z * a.x - x * a.z, x * a.y - y * a.x );
+    return vector3d(y * a.z - z * a.y, z * a.x - x * a.z, x * a.y - y * a.x );
 }
-vector3d vector3d::operator * (const double &a) const {
-    return (x * a, y * a, z * a);
+vector3d vector3d::operator * (double mult, const vector3d &a) const {
+    return vector3d(mult * a.x, a.y * mult, a.z * mult);
+}
+vector3d vector3d::operator * (const double &a, double mult) const {
+    return vector3d(mult * a.x, a.y * mult, a.z * mult);
+    
 }
 double vector3d::length(const vector3d &a) const {
-    return sqrt(x*x+y*y+z*z);
+    return sqrt(x * x + y * y + z * z);
 }
 vector3d vector3d::normalize(const vector3d &a) const {
-    return (x/length(a),y/length(a),z/length(a));
+    return vector3d(x/length(a),y/length(a),z/length(a));
 }
 double vector3d::compareTo( const vector3d &other ) const {
     return((x-other.x)+(y-other.y)+(z-other.z));

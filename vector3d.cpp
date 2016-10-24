@@ -40,7 +40,7 @@ vector3d vector3d::operator - () const {
 double vector3d::operator * (const vector3d &a) const {
     return (x * a.x + y * a.y + z * a.z);
 }
-vector3d operator ^ (const vector3d &a) const {
+vector3d vector3d::operator ^ (const vector3d &a) const {
     return vector3d(y * a.z - z * a.y, z * a.x - x * a.z, x * a.y - y * a.x );
 }
 vector3d operator * (double mult, const vector3d &a) {
